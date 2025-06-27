@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct FrameWorkGridMainView: View {
+    
+    let columns: [GridItem] = [
+        
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+    
+    ]
+    
     var body: some View {
-        FrameWorkTitleView(name: "Apple FrameWorks", imageName: "app-clip")
+        
+        LazyVGrid(columns: columns, content:  {
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+            FrameWorkTitleView(name: "Apple Clips", imageName: "app-clip")
+        } )
+        
     }
 }
 
